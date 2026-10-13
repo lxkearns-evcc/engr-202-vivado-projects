@@ -5,7 +5,7 @@ module problem_1(
 genvar i; 
 generate
 for (i = 0; i<=6;i=i+1) begin : g_led_sw
-    assign sw[i] = output[i];
+    assign sw[i] = led[i];
     end
 endgenerate
 endmodule
