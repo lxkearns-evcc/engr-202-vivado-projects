@@ -1,6 +1,7 @@
 module decoder_2_to_4(
         input [0:0] btn, [1:0] sw,
-        output reg [3:0] led
+        output reg [3:0] led,
+        reg sw_3_and_enable;
         );
 
 always @(*) begin
@@ -19,7 +20,7 @@ module decoder_3_to_8(
     output reg [7:0] led 
 );
 
-decoder_2_to_4 decoder1(btn[0],sw[1:0],led[7:4]);
-decoder_2_to_4 decoder2(btn[0],sw[1:0],led[3:0]);
-
+    decoder_2_to_4 decoder1(btn[0] & ~sw[2],sw[1:0],led[7:4]);
+    decoder_2_to_4 decoder2(btn[0] & sw[2],sw[1:0],led[3:0]);
+end
 endmodule
