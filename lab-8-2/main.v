@@ -19,8 +19,8 @@ module mux_4_to_1(
         output reg [0:0] led
         )
 always @(*) begin 
-    mux_2_to_1(btn[3:2],sw[0],thisInter[1]);
-    mux_2_to_1(btn[1:0],sw[0],thisInter[0])
-    led = mux_2_to_1(thisInter,sw[1]);
+    mux1 = mux_2_to_1(btn[3:2],sw[0],thisInter[1]);
+    mux2 = mux_2_to_1(btn[1:0],sw[0],thisInter[0])
+    led = mux_2_to_1(inter,sw[1]);
 end
 endmodule
