@@ -32,5 +32,6 @@ module four_bit_ripple_carry_adder_sim;
     #10 sw[7:0] = 8'b11001111;
     #10 sw[7:0] = 8'b11000011;
     #10 sw[7:0] = 8'b11001010;
+    #10 $finish;
     end
 endmodule
