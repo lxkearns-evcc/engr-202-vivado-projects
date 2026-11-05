@@ -1,0 +1,3 @@
+one HA and three FA 
+the HA passes it's value to the full adder but the output doesn't change anything on the board
+leds[
