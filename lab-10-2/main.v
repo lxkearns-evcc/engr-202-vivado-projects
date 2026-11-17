@@ -26,7 +26,7 @@ full_adder fa1(sw[4]&sw[0],sw[3]&sw[1],1'b0,pp1[0],carry[1]);
 full_adder fa2(sw[5]&sw[0],sw[4]&sw[1],carry[1],pp1[1],carry[2]);
 full_adder fa3(sw[5]&sw[1],1'b0,carry[2],pp1[2],pp1[3]); // carry out is bit 4 of row 1
 full_adder fa4(pp1[1],sw[3]&sw[2],1'b0,pp2[0],carry[4]);
-full_adder fa5([2],sw[4]&sw[2],carry[4],pp2[1],carry[5]);
+full_adder fa5(pp1[2],sw[4]&sw[2],carry[4],pp2[1],carry[5]);
 full_adder fa6(pp1[3],sw[5]&sw[2],carry[5],pp2[2],carry[6]);
 assign led[1] = pp1[0];
 assign led[2] = pp2[0];
